@@ -60,5 +60,5 @@ Operators:
 
 ##### Semantic Aspects
 **Declarations**: All identifiers need to be declared.
-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
 
+ss
