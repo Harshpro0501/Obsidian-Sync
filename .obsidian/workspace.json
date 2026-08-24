@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALYSIS.md",
+                "file": "Complex Analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ANALYSIS"
+              "title": "Complex Analysis"
             }
           },
           {
@@ -233,8 +233,11 @@
   },
   "active": "fad38f18aab2baa6",
   "lastOpenFiles": [
-    "ALGEBRA.md",
+    "calculus-4nbsped-0914098918-9780914098911_compress.pdf",
+    "Applied & Numerical Math.md",
+    "Blank Space.md",
     "ANALYSIS.md",
+    "ALGEBRA.md",
     "Abstract Algebra.md",
     "Elementary Algebra.md",
     "TOE1.pdf",
@@ -248,10 +251,7 @@
     "Geometry & Topology.md",
     "Elementary Algebra.pdf",
     "Discrete Math.md",
-    "Blank Space.md",
     "Complex Analysis.md",
-    "calculus-4nbsped-0914098918-9780914098911_compress.pdf",
-    "Applied & Numerical Math.md",
     "Face and Body/Body Re-composition (Diet Phase).md",
     "Main.pdf",
     "Set Theory and Logic.md",
