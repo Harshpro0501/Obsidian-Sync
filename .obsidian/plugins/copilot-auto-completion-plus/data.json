@@ -1,0 +1,195 @@
+{
+  "settings": {
+    "version": "2",
+    "enabled": false,
+    "advancedMode": false,
+    "apiProvider": "openai",
+    "azureOAIApiSettings": {
+      "key": "",
+      "url": "https://YOUR_AOI_SERVICE_NAME.openai.azure.com/openai/deployments/YOUR_DEPLOYMENT_NAME/chat/completions"
+    },
+    "openAIApiSettings": {
+      "key": "",
+      "url": "https://api.openai.com/v1/responses",
+      "model": "gpt-5.5"
+    },
+    "anthropicApiSettings": {
+      "key": "",
+      "url": "https://api.anthropic.com/v1/messages",
+      "model": "claude-sonnet-4-6"
+    },
+    "geminiApiSettings": {
+      "key": "",
+      "url": "https://generativelanguage.googleapis.com/v1beta",
+      "model": "gemini-3-flash-preview"
+    },
+    "ollamaApiSettings": {
+      "url": "http://localhost:11434/api/chat",
+      "model": ""
+    },
+    "triggers": [
+      {
+        "type": "string",
+        "value": "# "
+      },
+      {
+        "type": "string",
+        "value": ". "
+      },
+      {
+        "type": "string",
+        "value": ": "
+      },
+      {
+        "type": "string",
+        "value": ", "
+      },
+      {
+        "type": "string",
+        "value": "! "
+      },
+      {
+        "type": "string",
+        "value": "? "
+      },
+      {
+        "type": "string",
+        "value": "`"
+      },
+      {
+        "type": "string",
+        "value": "' "
+      },
+      {
+        "type": "string",
+        "value": "= "
+      },
+      {
+        "type": "string",
+        "value": "$ "
+      },
+      {
+        "type": "string",
+        "value": "> "
+      },
+      {
+        "type": "string",
+        "value": "\n"
+      },
+      {
+        "type": "regex",
+        "value": "[\\t ]*(\\-|\\*)[\\t ]+$"
+      },
+      {
+        "type": "regex",
+        "value": "[\\t ]*[0-9A-Za-z]+\\.[\\t ]+$"
+      },
+      {
+        "type": "regex",
+        "value": "\\$\\$\\n[\\t ]*$"
+      },
+      {
+        "type": "regex",
+        "value": "```[a-zA-Z0-9]*(\\n\\s*)?$"
+      },
+      {
+        "type": "regex",
+        "value": "\\s*(-|[0-9]+\\.) \\[.\\]\\s+$"
+      }
+    ],
+    "delay": 500,
+    "modelOptions": {
+      "temperature": 1,
+      "top_p": 0.1,
+      "frequency_penalty": 0.25,
+      "presence_penalty": 0,
+      "max_tokens": 800
+    },
+    "systemMessage": "Your job is to predict the most logical text that should be written at the location of the <mask/>.\nReturn only the text that should replace <mask/>.\nDo not include explanations, labels, analysis, Markdown fences, or surrounding text unless the replacement itself needs them.\nYour answer can be code, a single word, or multiple sentences.\nIf the <mask/> is in the middle of a partial sentence, return only the missing word or words needed to complete that sentence.\nDo not repeat text that already appears directly before or after the <mask/>.\nUse the same language, style, formatting, indentation, and Markdown context as the surrounding text.",
+    "fewShotExamples": [
+      {
+        "context": "BlockQuotes",
+        "input": "# Matthew effect\nIn the book Outliers, Malcolm Gladwell popularized the term Matthew effect.\nThis effect is named after the following New Testament verse:\n> <mask/>\nAccording to Malcolm Gladwell, the Matthew effect means that more successful people are most likely given special attention and opportunities leading to further success.",
+        "answer": "For unto everyone that hath shall be given, and he shall have abundance. But from him that hath not shall taken away even that which he hath.\n>  Matthew 25:29"
+      },
+      {
+        "context": "CodeBlock",
+        "input": "# debounce\nA debounce function makes sure that a function is only triggered once per user input. This is useful for event based triggers. You can implement in javascript like this:\n```javascript\nfunction debounce(func, timeout = 300){\n  <mask/>\n}\n```\n",
+        "answer": "let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => { func.apply(this, args); }, timeout);\n  };"
+      },
+      {
+        "context": "CodeBlock",
+        "input": "```python\ndef fibonacci(<mask/>) -> int:\n\tif n == 0 or n == 1:\n\t\treturn n\n\telse:\n\t\treturn fibonacci(n-1) + fibonacci(n-2)\n```\n",
+        "answer": "n: int"
+      },
+      {
+        "context": "Heading",
+        "input": "# The <mask/> function\nThe softmax function transforms a vector into a probability distribution such that the sum of the vector is equal to 1.",
+        "answer": "Softmax"
+      },
+      {
+        "context": "NumberedList",
+        "input": "# Binary search\nBinary is a sorting O(log(n)) searching algorithm. It works as follows:\n1. Ensure you have a sorted array.\n2. Check the middle element in the list:\n3. Return the index if this is the item you are looking for.\n4. <mask/>\n5. Go to step 2 with the remaining left half if the item is larger than the target.\n6. If there are no more elements to check, the return indicates that the item is not in the list.\n",
+        "answer": "Go to step 2 with the remaining right half if the item is smaller than the target."
+      },
+      {
+        "context": "TaskList",
+        "input": "# Prepare for conference\nBefore going to a conference, there are a few things to do:\n- [ ] Finish presentation\n\t- [ ] Write outline\n\t- [ ] Create slides\n\t- [ ] Practice presentation\n- [ ] Book flights  \n- [ ] Reserve hotel  \n- [ ] Pack suitcase\n\t- [ ] <mask/>\n- [ ] Arrange transportation to airport\n",
+        "answer": "Clothes"
+      },
+      {
+        "context": "TaskList",
+        "input": " # Write blog post about Obsidian\nFor my Obsidian blog post, I need to do the following:\n- [ ] Research about Obsidian.\n- [ ] Create an outline for the blog.\n- [ ] Gather relevant visual aids.  \n- [ ] <mask/>\n- [ ] Review and edit the first draft  \n",
+        "answer": "Write the first draft"
+      },
+      {
+        "context": "Text",
+        "input": "# Locality-sensitive hashing (LSH)\nLocality-sensitive hashing (LSH) is an algorithm that hashes similar items into the same buckets with high probability.\n\n## Potential problems\n### Collision (AND)\nThis happens when distant points are hashed into the same bucket. <mask/>\n\n### Split (OR)\nNearby points are hashed into different buckets. This problem can be solved by using multiple hash tables instead of one. Points are candidates neighbors if they are a candidate in any of the hash tables. As a result the false negative rate reduces significantly, while the false positives rate only increase slightly.",
+        "answer": "This problem can be solved by having multiple projections/hashes per table, where points are candidates' neighbors if they occur in all query bins."
+      },
+      {
+        "context": "Text",
+        "input": "# Digitizing sound waves \nTypical sound waves are complex and consist of multiple waves, each with amplitude, frequency, and phase.\nWhen we digitize a sound, we sample the amplitude, the difference compared to the base level, at fixed intervals. This gives a sequence of digital values that can be used to approximate the original sound wave by recreating the pressure changes over time. The <mask/> is known as the sampling rate. The sampling rate must be chosen correctly, or we cannot represent specific frequencies or introduce unintended distortions.",
+        "answer": "chosen interval"
+      },
+      {
+        "context": "UnorderedList",
+        "input": "# Relu activation function\nThe ReLU activation function is a relatively simple non-linear function:\n$$\nReLU(x) = max(0, x)\n$$\nAdvantages:\n- <mask/>\n\nDisadvantages:\n- Dead ReLU problem, whereby specific activation will only output zeros and thus will not have any gradients. This can be computationally wasteful since we still need matrix multiplication.\n- Range $[0, \\infty]$ so Exploding Gradients can still be a problem.\n",
+        "answer": "Computational cheap activations and gradients.\n- Vanishing gradient problem is rare, assuming correct weight initialization."
+      },
+      {
+        "context": "UnorderedList",
+        "input": "# SOLID\nSOLID is a set of design principles from Robert C. Martin. It consists of the following sub-principles:\n- S: Single Responsibility Principle: A class should have only one reason to change, meaning it should only have one job or responsibility.\n- <mask/>\n- I: Interface Segregation Principle: Clients should not be forced to depend on interfaces they do not use.\n- D: Dependency Inversion Principle: High-level modules should not depend on low-level modules, but both should depend on abstractions.\n",
+        "answer": "O: Open-Closed Principle: Software entities should be open for extension, but closed for modification.\n- L: Liskov Substitution Principle: Subtypes must be substitutable for their base types without altering the correctness of the program."
+      },
+      {
+        "context": "MathBlock",
+        "input": "# Logarithm definition\nA logarithm is the power to which a base must be raised to yield a given number. For example, $2^3 =8$; therefore, $3$ is the logarithm of $8$ to base $2$, or in other words $ <mask/>$",
+        "answer": "3 = \\log_2(8)"
+      },
+      {
+        "context": "MathBlock",
+        "input": "# Sample mean\nThe sample mean, or sometime called average, is defined as:\n\n$$\nsample\\_mean(x) = <mask/>\n$$\nThe average value has the property that 50% of the weighted* value will be above and below it. This weighted property can make it more sensitive to outliers than the median.\n",
+        "answer": "\\frac{1}{n} \\sum_i^n x_i"
+      },
+      {
+        "context": "Heading",
+        "input": "# <mask/>\nA neuron is considered dead if it does not activate for any of the training instance in the training dataset. Because it never activates it will never have a gradient due to the chain rule so it also cannot change anymore. The dead ReLU problem can have due to a wide variety of reasons, such as:\n1. Poorly initialized weights.\n2. Extremely high learning rates during training.\n",
+        "answer": "The dead ReLU problem"
+      }
+    ],
+    "userMessageTemplate": "{{prefix}}<mask/>{{suffix}}",
+    "chainOfThoughRemovalRegex": "",
+    "dontIncludeDataviews": true,
+    "maxPrefixCharLimit": 4000,
+    "maxSuffixCharLimit": 4000,
+    "removeDuplicateMathBlockIndicator": true,
+    "removeDuplicateCodeBlockIndicator": true,
+    "ignoredFilePatterns": "**/secret/**\n",
+    "ignoredTags": "",
+    "cacheSuggestions": true,
+    "debugMode": false,
+    "promptBundleVersion": "answer_only_v2",
+    "redactSensitiveData": false
+  }
+}

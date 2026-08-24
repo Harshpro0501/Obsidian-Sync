@@ -1,0 +1,276 @@
+{
+  "main": {
+    "id": "fd3bcccd606d66db",
+    "type": "split",
+    "children": [
+      {
+        "id": "38245babd7a13a50",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fad38f18aab2baa6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ANALYSIS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ANALYSIS"
+            }
+          },
+          {
+            "id": "a5978a30bf500b53",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "TOE1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "TOE1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bc099e6ec96546de",
+    "type": "split",
+    "children": [
+      {
+        "id": "d337f6c323e625bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25975038d6b19784",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cba9f582ad42e029",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "386f09a0218c14c2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "4ca3b2b3e1332945",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e3b2b0fc2ba6e82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eff41e83352e4b11",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Skills and Assets/C and C++.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "632e7e9b42bd23c7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Mathematics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Mathematics"
+            }
+          },
+          {
+            "id": "61bac12f09f9a0a9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9011653ca6a7e9ed",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "efd89c32895b1389",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Mathematics.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Mathematics"
+            }
+          },
+          {
+            "id": "5210e073382f8381",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {},
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
+          },
+          {
+            "id": "79d4da6a053bb98c",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          },
+          {
+            "id": "80dc1f60823fd861",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 7
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "graph:Open graph view": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "realclaudian:Open Claudian": false,
+      "audio-recorder:Start/stop recording": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "fad38f18aab2baa6",
+  "lastOpenFiles": [
+    "ALGEBRA.md",
+    "ANALYSIS.md",
+    "Abstract Algebra.md",
+    "Elementary Algebra.md",
+    "TOE1.pdf",
+    "Skills and Assets/C and C++.md",
+    "Single Variable  Theoretical Calculus.md",
+    "Probability & Statistics.md",
+    "ODEs and PDEs.md",
+    "Mathematics.md",
+    "Latex Suite Config File.md",
+    "Inequalities.md",
+    "Geometry & Topology.md",
+    "Elementary Algebra.pdf",
+    "Discrete Math.md",
+    "Blank Space.md",
+    "Complex Analysis.md",
+    "calculus-4nbsped-0914098918-9780914098911_compress.pdf",
+    "Applied & Numerical Math.md",
+    "Face and Body/Body Re-composition (Diet Phase).md",
+    "Main.pdf",
+    "Set Theory and Logic.md",
+    "Write about the characteristics of an algorithm..md",
+    "Skills and Assets/Computer Science.md",
+    "Face and Body/Skincare.md",
+    "Skills and Assets/CS Foundations.md",
+    "Skills and Assets/Mathematics(Theoretical and Practical).md",
+    "Skills and Assets/Computer Science Fundamentals.md",
+    "Skills and Assets/Skill Set.md",
+    "Skills and Assets",
+    "Untitled.canvas",
+    "Excalidraw",
+    "courant_john1.pdf",
+    "Untitled",
+    "Pasted image 20260709162410.png",
+    "Pasted image 20260723163956.png",
+    "Pasted image 20260723163953.png",
+    "Face and Body",
+    "Mathematics"
+  ]
+}

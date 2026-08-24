@@ -1,0 +1,11 @@
+{
+  "copilot-auto-completion-plus:disable": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "D"
+    }
+  ]
+}

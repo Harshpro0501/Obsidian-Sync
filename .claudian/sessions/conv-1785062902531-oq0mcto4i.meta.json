@@ -1,0 +1,24 @@
+{
+  "id": "conv-1785062902531-oq0mcto4i",
+  "providerId": "claude",
+  "title": "hi",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1785062902535,
+  "updatedAt": 1785063099047,
+  "lastResponseAt": 1785063099047,
+  "sessionId": "c00daea8-0b9a-455a-a96f-63875224a57b",
+  "selectedModel": "sonnet[1m]",
+  "providerState": {
+    "providerSessionId": "c00daea8-0b9a-455a-a96f-63875224a57b"
+  },
+  "currentNote": "Latex Suite Config File.md",
+  "usage": {
+    "model": "sonnet[1m]",
+    "inputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 1000000,
+    "contextTokens": 0,
+    "percentage": 0
+  }
+}

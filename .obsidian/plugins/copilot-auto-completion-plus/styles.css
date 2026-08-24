@@ -1,0 +1,29 @@
+.setting-list-item-copilot-auto-completion {
+    display: flex;
+    align-items: center;
+    padding: 0.75em 0;
+}
+
+.setting-item-text-area-copilot-auto-completion {
+    width: 100%;
+    resize: vertical;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+.loader-placeholder-copilot-auto-completion {
+    width: 25px;
+    height: 25px;
+}
+.loader-copilot-auto-completion {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--background-modifier-border);
+    border-top-color: #1976d2;
+    border-radius: 50%;
+    animation: rotate-copilot-auto-completion 1s linear infinite
+}
+
+@keyframes rotate-copilot-auto-completion {
+    100%   {transform: rotate(360deg)}
+}
